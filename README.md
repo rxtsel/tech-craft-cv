@@ -84,6 +84,7 @@ pnpm run dev
 
 - [x] Validate Harvard Template with recluters.
 - [x] Create Readme.
+- [ ] Validate CV Schema.
 - [ ] Design ERD diagram.
 - [ ] Create tables into DB.
 - [ ] Define Auth.
