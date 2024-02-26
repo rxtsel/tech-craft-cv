@@ -8,7 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "prettier --write .",
+    "lint": "prettier --write . --plugin=prettier-plugin-astro",
     "prepare": "husky install"
   },
   "dependencies": {
