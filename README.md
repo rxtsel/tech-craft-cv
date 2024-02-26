@@ -11,7 +11,8 @@
 - [4. Features](#4-features)
 - [5. Technology Stack](#5-technology-stack)
 - [6. Installation](#6-installation)
-- [7. Todos](#7-todos)
+- [7. How to contribute](#7-how-to-contribute)
+- [8. TODOS](#8-todos)
 
 ## 1. Introduction
 
@@ -62,12 +63,6 @@ Clone this repository:
 git clone git@github.com:rxtsel/dev-craft-cv.git
 ```
 
-Create new branch:
-
-```bash
-git switch -c feat/<feature-name>
-```
-
 Install dependencies:
 
 ```bash
@@ -80,7 +75,16 @@ Run local server
 pnpm run dev
 ```
 
-## 7. TODOS:
+## 7. How to contribute
+
+- Fork this repository.
+- Create a new branch with the name of the feature you want to develop.
+- Make your changes and commit them using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
+- Push the changes to your fork.
+- Create a pull request to the main repository.
+- Wait for the review and approval of the pull request.
+
+## 8. TODOS:
 
 - [x] Validate Harvard Template with recluters.
 - [x] Create Readme.
