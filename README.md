@@ -85,9 +85,9 @@ pnpm run dev
 - [x] Validate Harvard Template with recluters.
 - [x] Create Readme.
 - [ ] Validate CV Schema.
+- [ ] Define Auth.
 - [ ] Design ERD diagram.
 - [ ] Create tables into DB.
-- [ ] Define Auth.
 - [ ] Create Endpoints.
 - [ ] Define UX/UI.
 - [ ] Define priority of views to develop.
