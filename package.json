@@ -7,6 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint \"*/**/*.{js,ts,jsx,tsx}\" --fix",
+    "tsc": "tsc --noEmit",
+    "format": "prettier -w -u .",
     "preview": "vite preview",
     "prepare": "husky install"
   },
@@ -30,6 +32,19 @@
     "husky": "^8.0.0",
     "prettier": "3.2.5",
     "typescript": "^5.2.2",
-    "vite": "^5.1.4"
+    "vite": "^5.1.4",
+    "lint-staged": "^15.2.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "npm run lint",
+      "npm run format"
+    ],
+    "*.{css}": [
+      "npm run format"
+    ],
+    "*.{json,md,yml}": [
+      "npm run format"
+    ]
   }
 }
