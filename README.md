@@ -12,7 +12,7 @@
 - [5. Technology Stack](#5-technology-stack)
 - [6. Installation](#6-installation)
 - [7. How to contribute](#7-how-to-contribute)
-- [8. TODOS](#8-todos)
+- [8. TODOS](#8-canvas)
 
 ## 1. Introduction
 
@@ -27,9 +27,9 @@ The DevCraftCV project aims to revolutionize the way developers create resumes b
 
 ## 3. Architecture Overview
 
-The architecture of DevCraftCV consists of a frontend developed in Astro and a backend built in Subapase, with communication between them via a REST API.
+The architecture of DevCraftCV consists of a frontend developed in React and a backend built in Subapase, with communication between them via a REST API.
 
-- **Frontend (Astro):** We use Astro to develop a modern and responsive user interface. Astro allows us to create reusable web components and maintain an excellent user experience while being framework-agnostic.
+- **Frontend (React):** We use React with Vite to develop a modern and responsive user interface.
 
 - **Backend (Subapase):** We have chosen Subapase as our backend to manage business logic and data management. Subapase offers us a flexible and scalable structure to efficiently build and maintain our REST API.
 
@@ -52,7 +52,7 @@ The architecture of DevCraftCV consists of a frontend developed in Astro and a b
 ## 5. Technology Stack
 
 - **Backend**: We utilize Subapase for the backend, which provides PostgreSQL database, authentication, among other services.
-- **Frontend**: Our frontend is developed using Astro, with the option to integrate React if necessary.
+- **Frontend**: Our frontend is developed using React with Vite.
 - **Additional tools and libraries**: We employ [OpenIA](https://openai.com/product), [HugeIcons](https://hugeicons.com/), and [Shadcn](https://ui.shadcn.com/) in the project.
 
 ## 6. Installation
@@ -84,14 +84,6 @@ pnpm run dev
 - Create a pull request to the main repository.
 - Wait for the review and approval of the pull request.
 
-## 8. TODOS:
+## 8. CANVAS:
 
-- [x] Validate Harvard Template with recluters.
-- [x] Create Readme.
-- [x] Validate CV Schema.
-- [ ] Define Auth.
-- [ ] Design ERD diagram.
-- [ ] Create tables into DB.
-- [ ] Create Endpoints.
-- [ ] Define UX/UI.
-- [ ] Define priority of views to develop.
+The project canvas is available [here](https://github.com/users/rxtsel/projects/1).
