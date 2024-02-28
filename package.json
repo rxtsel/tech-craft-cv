@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint \"*/**/*.{js,ts,jsx,tsx}\" --fix",
     "tsc": "tsc --noEmit",
-    "format": "prettier -w -u ."
+    "format": "prettier -w -u .",
+    "prepare": "husky install",
+    "phoenix": "rm -rf node_modules && rm pnpm-lock.yaml && rm -rf dist && rm -rf .next && pnpm i"
   },
   "dependencies": {
     "@radix-ui/react-slot": "1.0.2",
