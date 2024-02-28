@@ -27,9 +27,9 @@ The DevCraftCV project aims to revolutionize the way developers create resumes b
 
 ## 3. Architecture Overview
 
-The architecture of DevCraftCV consists of a frontend developed in React and a backend built in Subapase, with communication between them via a REST API.
+The architecture of DevCraftCV consists of a frontend developed in Next.js and a backend built in Subapase, with communication between them via a REST API.
 
-- **Frontend (React):** We use React with Vite to develop a modern and responsive user interface.
+- **Frontend (Next.js):** We use Next.js to develop a modern and responsive user interface.
 
 - **Backend (Subapase):** We have chosen Subapase as our backend to manage business logic and data management. Subapase offers us a flexible and scalable structure to efficiently build and maintain our REST API.
 
@@ -52,7 +52,7 @@ The architecture of DevCraftCV consists of a frontend developed in React and a b
 ## 5. Technology Stack
 
 - **Backend**: We utilize Subapase for the backend, which provides PostgreSQL database, authentication, among other services.
-- **Frontend**: Our frontend is developed using React with Vite.
+- **Frontend**: Our frontend is developed using Next.js.
 - **Additional tools and libraries**: We employ [OpenIA](https://openai.com/product), [HugeIcons](https://hugeicons.com/), and [Shadcn](https://ui.shadcn.com/) in the project.
 
 ## 6. Installation
