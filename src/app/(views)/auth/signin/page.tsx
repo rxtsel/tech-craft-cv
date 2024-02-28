@@ -1,8 +1,6 @@
-import { Icons } from "@/components";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button, Input, Icons } from "@/components";
 
-export const SignIn = () => {
+const SignIn = () => {
   return (
     <section className="mx-auto flex w-full max-w-xs flex-col gap-4">
       <header className="space-y-2 text-center">
@@ -40,3 +38,5 @@ export const SignIn = () => {
     </section>
   );
 };
+
+export default SignIn;
