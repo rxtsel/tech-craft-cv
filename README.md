@@ -1,4 +1,4 @@
-# 🤓 DevCraftCV
+# 🤓 TechCraftCV
 
 > [!IMPORTANT]
 > 🚀 This open-source project is currently under active development. Feel free to contribute and help make it even better! 🌟
@@ -16,7 +16,7 @@
 
 ## 1. Introduction
 
-The DevCraftCV project aims to revolutionize the way developers create resumes by providing an intelligent and user-friendly platform powered by AI. This document outlines the design and implementation details of the DevCraftCV application.
+The TechCraftCV project aims to revolutionize the way developers create resumes by providing an intelligent and user-friendly platform powered by AI. This document outlines the design and implementation details of the TechCraftCV application.
 
 ## 2. Goals and Objectives
 
@@ -27,7 +27,7 @@ The DevCraftCV project aims to revolutionize the way developers create resumes b
 
 ## 3. Architecture Overview
 
-The architecture of DevCraftCV consists of a frontend developed in Next.js and a backend built in Subapase, with communication between them via a REST API.
+The architecture of TechCraftCV consists of a frontend developed in Next.js and a backend built in Subapase, with communication between them via a REST API.
 
 - **Frontend (Next.js):** We use Next.js to develop a modern and responsive user interface.
 
