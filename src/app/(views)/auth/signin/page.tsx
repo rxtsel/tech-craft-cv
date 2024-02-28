@@ -1,4 +1,5 @@
-import { Button, Input, Icons } from "@/components";
+import { Button, Icons } from "@/components";
+import { LoginForm } from "./_components/login-form";
 
 const SignIn = () => {
   return (
@@ -8,7 +9,7 @@ const SignIn = () => {
         <p className="text-muted-foreground">Sign in to your account</p>
       </header>
 
-      <form className="space-y-4">
+      <div className="space-y-4">
         <Button className="w-full">
           <Icons.gh className="mr-2 h-4 w-4 fill-white" /> Login with GitHub
         </Button>
@@ -27,14 +28,9 @@ const SignIn = () => {
             </span>
           </div>
         </div>
+      </div>
 
-        <div className="space-y-4">
-          <Input placeholder="Email" type="email" />
-          <Button className="w-full" variant="secondary">
-            Continue
-          </Button>
-        </div>
-      </form>
+      <LoginForm />
     </section>
   );
 };
