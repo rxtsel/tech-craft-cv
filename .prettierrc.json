@@ -10,5 +10,6 @@
   "jsxSingleQuote": false,
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
-  "importOrderCaseInsensitive": true
+  "importOrderCaseInsensitive": true,
+  "plugins": ["prettier-plugin-tailwindcss"]
 }
