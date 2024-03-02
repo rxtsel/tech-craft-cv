@@ -57,7 +57,9 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "npm run lint",
-      "npm run format",
+      "npm run format"
+    ],
+    "*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}": [
       "npm run test"
     ],
     "*.css": [
