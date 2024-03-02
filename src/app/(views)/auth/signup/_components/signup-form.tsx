@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2 } from "lucide-react";
 import { useForm } from "react-hook-form";
 
-export const LoginForm = () => {
+export const SignUpForm = () => {
   const {
     register,
     handleSubmit,
@@ -37,7 +37,7 @@ export const LoginForm = () => {
         {isSubmitting ? (
           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
         ) : (
-          "Sign In"
+          "Get Started"
         )}
       </Button>
     </form>

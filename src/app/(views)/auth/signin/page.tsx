@@ -1,5 +1,7 @@
 import { Button, Icons } from "@/components";
 import { LoginForm } from "./_components/login-form";
+import { AUTH_ROUTES } from "@/constants";
+import Link from "next/link";
 
 const SignIn = () => {
   return (
@@ -31,6 +33,13 @@ const SignIn = () => {
       </div>
 
       <LoginForm />
+
+      <Link
+        href={AUTH_ROUTES.signUp}
+        className="text-sm text-muted-foreground transition-colors hover:text-black hover:underline dark:hover:text-white"
+      >
+        Don&apos;t have an account? Sign up
+      </Link>
     </section>
   );
 };

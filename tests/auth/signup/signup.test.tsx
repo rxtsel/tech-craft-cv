@@ -19,7 +19,7 @@ describe("Sign up page", () => {
   });
 
   it("Should show validate message error when email is empty and form is submit", async () => {
-    const btnSubmit = screen.getByRole("button", { name: /sign in/i });
+    const btnSubmit = screen.getByRole("button", { name: /get started/i });
 
     // Submit form
     fireEvent.click(btnSubmit);
