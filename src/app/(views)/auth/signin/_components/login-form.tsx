@@ -1,8 +1,7 @@
 "use client";
 
 import { Button, FormField } from "@/components";
-import { LoginFormData } from "@/models";
-import { LoginScheme } from "@/schemes";
+import { LoginScheme, LoginFormData } from "@/schemes";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2 } from "lucide-react";
 import { useForm } from "react-hook-form";

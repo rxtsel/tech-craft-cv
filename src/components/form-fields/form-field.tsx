@@ -1,5 +1,5 @@
 import { Input } from "@/components";
-import type { FormFieldProps } from "@/models";
+import type { FormFieldProps } from "@/schemes";
 
 export const FormField: React.FC<FormFieldProps> = ({
   type,
