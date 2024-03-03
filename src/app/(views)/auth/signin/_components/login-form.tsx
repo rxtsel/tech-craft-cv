@@ -1,7 +1,8 @@
 "use client";
 
 import { Button, FormField } from "@/components";
-import { LoginScheme, LoginFormData } from "@/schemes";
+import { SignInScheme } from "@/schemes";
+import { SignIn } from "@/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2 } from "lucide-react";
 import { useForm } from "react-hook-form";
@@ -11,11 +12,11 @@ export const LoginForm = () => {
     register,
     handleSubmit,
     formState: { errors, isSubmitting }
-  } = useForm<LoginFormData>({
-    resolver: zodResolver(LoginScheme)
+  } = useForm<SignIn>({
+    resolver: zodResolver(SignInScheme)
   });
 
-  const onSubmit = async (data: LoginFormData) => {
+  const onSubmit = async (data: SignIn) => {
     console.log("SUCCESS", data);
   };
 
@@ -28,6 +29,7 @@ export const LoginForm = () => {
         register={register}
         error={errors.email}
       />
+
       <Button
         disabled={isSubmitting}
         type="submit"
