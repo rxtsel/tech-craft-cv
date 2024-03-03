@@ -18,3 +18,7 @@ export const AUTH_ROUTES = {
 export const DASHBOARD_ROUTES = {
   dashboard: "/dashboard"
 };
+
+export const APP_ROUTES = {
+  github: "https://github.com/rxtsel/tech-craft-cv"
+};
