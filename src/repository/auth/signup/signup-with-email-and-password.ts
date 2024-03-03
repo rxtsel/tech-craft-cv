@@ -6,7 +6,7 @@ import { SignUp } from "@/types";
 export async function signUpWithEmailAndPassword(data: SignUp) {
   const supabase = await createSupabaseServerClient();
   const result = await supabase.auth.signUp({
-    email: data.email + data.email,
+    email: data.email,
     password: data.password
   });
 
