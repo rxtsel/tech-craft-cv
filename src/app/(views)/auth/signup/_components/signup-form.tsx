@@ -1,11 +1,13 @@
 "use client";
 
 import { Button, FormField } from "@/components";
+import { AUTH_ROUTES } from "@/constants";
 import { signUpWithEmailAndPassword } from "@/repository";
 import { SignUpScheme } from "@/schemes";
 import { SignUp } from "@/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2 } from "lucide-react";
+import { redirect } from "next/navigation";
 import { useTransition } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -20,6 +22,8 @@ export const SignUpForm = () => {
     resolver: zodResolver(SignUpScheme)
   });
 
+  const form = document.querySelector("form")!;
+
   const onSubmit = async (data: SignUp) => {
     startTransition(async () => {
       const result = await signUpWithEmailAndPassword(data);
@@ -30,7 +34,14 @@ export const SignUpForm = () => {
         return;
       }
 
-      toast.success("Account created successfully");
+      toast.success(
+        "Account created successfully, confirm your email and sign in",
+        { duration: 5000 }
+      );
+
+      form.reset();
+
+      redirect(AUTH_ROUTES.signIn);
     });
   };
 
