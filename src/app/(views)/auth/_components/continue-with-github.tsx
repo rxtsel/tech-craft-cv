@@ -1,7 +1,7 @@
 "use client";
 
 import { Button, Icons } from "@/components";
-import { continueWithGitHub } from "@/repository";
+import { continueWithGitHub } from "@/modules";
 
 export const ContinueWithGitHubButton = () => {
   return (

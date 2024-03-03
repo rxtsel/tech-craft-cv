@@ -7,7 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2 } from "lucide-react";
 import { useTransition } from "react";
 import { useForm } from "react-hook-form";
-import { signInWithEmail } from "@/repository";
+import { signInWithEmail } from "@/modules";
 import { toast } from "sonner";
 import { DASHBOARD_ROUTES } from "@/constants";
 import { redirect } from "next/navigation";

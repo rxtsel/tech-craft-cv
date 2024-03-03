@@ -1,5 +1,6 @@
 import { Github, LogOut, Settings, User } from "lucide-react";
 
+import { Avatar, AvatarFallback, AvatarImage } from "@/components";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,27 +10,32 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components";
-import { signOut } from "@/repository";
 import { APP_ROUTES } from "@/constants";
+import { signOut } from "@/modules";
+import { getUser } from "@/modules/user/application/get-user";
+import { userRepository } from "@/modules/user/infrastructure/dependencies";
 
-export function ProfileMenu() {
+export const ProfileMenu = async () => {
+  const user = await getUser(userRepository)();
+
+  if (user === null) return null;
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Avatar className="select-none">
-          <AvatarImage
-            src="https://github.com/shadcn.png"
-            alt="@shadcn"
-            loading="lazy"
-          />
+          {user.avatar_url && (
+            <AvatarImage src={user.avatar_url} alt="@shadcn" loading="lazy" />
+          )}
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
         <DropdownMenuLabel className="flex flex-col">
-          Cristhian Melo
-          <span className="font-medium text-muted-foreground">@rxstel</span>
+          {user.name}
+          <span className="font-medium text-muted-foreground">
+            @{user.user_name}
+          </span>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
@@ -61,4 +67,4 @@ export function ProfileMenu() {
       </DropdownMenuContent>
     </DropdownMenu>
   );
-}
+};

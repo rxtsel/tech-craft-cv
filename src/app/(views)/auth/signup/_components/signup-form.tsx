@@ -2,7 +2,7 @@
 
 import { Button, FormField } from "@/components";
 import { AUTH_ROUTES } from "@/constants";
-import { signUpWithEmailAndPassword } from "@/repository";
+import { signUpWithEmailAndPassword } from "@/modules";
 import { SignUpScheme } from "@/schemes";
 import { SignUp } from "@/types";
 import { zodResolver } from "@hookform/resolvers/zod";

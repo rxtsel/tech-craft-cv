@@ -1,7 +1,7 @@
 "use client";
 
 import { Button, Icons } from "@/components";
-import { continueWithGoogle } from "@/repository";
+import { continueWithGoogle } from "@/modules";
 
 export const ContinueWithGoogleButton = () => {
   return (
