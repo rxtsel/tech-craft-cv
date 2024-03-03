@@ -73,4 +73,16 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  li[data-sonner-toast][data-type="success"] svg {
+    @apply text-green-400;
+  }
+
+  li[data-sonner-toast][data-type="warning"] svg {
+    @apply text-yellow-400;
+  }
+
+  li[data-sonner-toast][data-type="error"] svg {
+    @apply text-destructive;
+  }
 }
