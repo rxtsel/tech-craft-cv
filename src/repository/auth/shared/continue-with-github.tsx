@@ -1,7 +1,7 @@
 import { AUTH_ROUTES } from "@/constants";
 import { supabase } from "@/lib/supabase/client";
 
-export const signInWithGitHub = () => {
+export const continueWithGitHub = () => {
   supabase.auth.signInWithOAuth({
     provider: "github",
     options: {
