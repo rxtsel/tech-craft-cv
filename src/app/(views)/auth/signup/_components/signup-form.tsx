@@ -22,8 +22,6 @@ export const SignUpForm = () => {
     resolver: zodResolver(SignUpScheme)
   });
 
-  const form = document.querySelector("form")!;
-
   const onSubmit = async (data: SignUp) => {
     startTransition(async () => {
       const result = await signUpWithEmailAndPassword(data);
@@ -38,8 +36,6 @@ export const SignUpForm = () => {
         "Account created successfully, confirm your email and sign in",
         { duration: 5000 }
       );
-
-      form.reset();
 
       redirect(AUTH_ROUTES.signIn);
     });
