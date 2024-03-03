@@ -1,6 +1,6 @@
 "use client";
 
-import { signUpWithEmailAndPassword } from "@/actions/auth/signup/signup-with-email-and-password";
+import { signUpWithEmailAndPassword } from "@/actions";
 import { Button, FormField } from "@/components";
 import { SignUpScheme } from "@/schemes";
 import { SignUp } from "@/types";
