@@ -1,1 +1,1 @@
-export * from "./signin-with-github";
+export * from "./signin-with-email";

@@ -6,7 +6,6 @@ export const SignInScheme: ZodType<SignIn> = z.object({
   password: z
     .string()
     .min(6, { message: "Password must be at least 6 characters" })
-    .optional()
 });
 
 export const SignUpScheme: ZodType<SignUp> = z
