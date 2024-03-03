@@ -1,23 +1,39 @@
 "use client";
 
+import { signUpWithEmailAndPassword } from "@/actions/auth/signup/signup-with-email-and-password";
 import { Button, FormField } from "@/components";
 import { SignUpScheme } from "@/schemes";
 import { SignUp } from "@/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2 } from "lucide-react";
+import { useTransition } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 
 export const SignUpForm = () => {
+  const [isPending, startTransition] = useTransition();
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting }
+    formState: { errors }
   } = useForm<SignUp>({
     resolver: zodResolver(SignUpScheme)
   });
 
   const onSubmit = async (data: SignUp) => {
-    console.log("SUCCESS", data);
+    startTransition(async () => {
+      const result = await signUpWithEmailAndPassword(data);
+      const { error } = JSON.parse(result);
+
+      if (error) {
+        console.log("ERROR", error);
+
+        toast.error(error.message);
+        return;
+      }
+
+      toast.success("Account created successfully");
+    });
   };
 
   return (
@@ -49,12 +65,12 @@ export const SignUpForm = () => {
       </div>
 
       <Button
-        disabled={isSubmitting}
+        disabled={isPending}
         type="submit"
         className="w-full"
         variant="secondary"
       >
-        {isSubmitting ? (
+        {isPending ? (
           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
         ) : (
           "Get Started"
