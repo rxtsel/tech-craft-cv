@@ -14,20 +14,23 @@ import { APP_ROUTES } from "@/constants";
 import { signOut } from "@/modules";
 import { getUser } from "@/modules/user/application/get-user";
 import { userRepository } from "@/modules/user/infrastructure/dependencies";
+import { generateInitials } from "@/lib/utils";
 
 export const ProfileMenu = async () => {
   const user = await getUser(userRepository)();
 
   if (user === null) return null;
 
+  const initials = generateInitials(
+    user.name! || user.user_name! || user.email!
+  );
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Avatar className="select-none">
-          {user.avatar_url && (
-            <AvatarImage src={user.avatar_url} alt="@shadcn" loading="lazy" />
-          )}
-          <AvatarFallback>CN</AvatarFallback>
+          <AvatarImage src={user.avatar_url!} alt="@shadcn" loading="lazy" />
+          <AvatarFallback>{initials}</AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
