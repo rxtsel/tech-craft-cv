@@ -9,7 +9,7 @@ import { useTransition } from "react";
 import { useForm } from "react-hook-form";
 import { signInWithEmail } from "@/repository";
 import { toast } from "sonner";
-import { AUTH_ROUTES, DASHBOARD_ROUTES } from "@/constants";
+import { DASHBOARD_ROUTES } from "@/constants";
 import { redirect } from "next/navigation";
 
 export const LoginForm = () => {
@@ -22,8 +22,6 @@ export const LoginForm = () => {
     resolver: zodResolver(SignInScheme)
   });
 
-  const form = document.querySelector("form")!;
-
   const onSubmit = async (data: SignIn) => {
     startTransition(async () => {
       const result = await signInWithEmail(data);
@@ -35,8 +33,6 @@ export const LoginForm = () => {
       }
 
       toast.success("Welcome back to TechCraftCV! 😃", { duration: 5000 });
-
-      form.reset();
 
       redirect(DASHBOARD_ROUTES.dashboard);
     });
