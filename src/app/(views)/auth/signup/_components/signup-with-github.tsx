@@ -1,4 +1,4 @@
-"use server";
+"use client";
 
 import { Button, Icons } from "@/components";
 import { signUpWithGitHub } from "@/repository";
