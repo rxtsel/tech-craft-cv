@@ -26,5 +26,22 @@ export const Icons = {
       />
       <path fill="none" d="M0 0h48v48H0z" />
     </svg>
+  ),
+  menu: (props: IconProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      color="currentColor"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="1.5"
+        d="M4 8.5h16M4 15.5h16"
+      />
+    </svg>
   )
 };
