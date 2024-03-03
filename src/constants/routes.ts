@@ -1,3 +1,8 @@
+export const BASE_URL =
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:3000"
+    : "https://tech-craft-cv.vercel.app";
+
 export const MAIN_ROUTES = {
   home: "/",
   notFound: "*"
@@ -5,6 +10,7 @@ export const MAIN_ROUTES = {
 
 export const AUTH_ROUTES = {
   auth: "/auth",
+  callback: "/auth/callback",
   signIn: "/auth/signin",
   signUp: "/auth/signup"
 };
