@@ -48,7 +48,7 @@ export const SignUpForm = () => {
         <FormField
           type="password"
           name="password"
-          placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;"
+          placeholder="&bull;&bull;&bull;&bull;&bull;&bull;"
           register={register}
           error={errors.password}
         />
@@ -56,7 +56,7 @@ export const SignUpForm = () => {
         <FormField
           type="password"
           name="repeatPassword"
-          placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;"
+          placeholder="&bull;&bull;&bull;&bull;&bull;&bull;"
           register={register}
           error={errors.repeatPassword}
         />
