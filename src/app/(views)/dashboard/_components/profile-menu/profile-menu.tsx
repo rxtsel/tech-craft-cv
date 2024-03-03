@@ -36,9 +36,16 @@ export const ProfileMenu = async () => {
       <DropdownMenuContent className="w-56">
         <DropdownMenuLabel className="flex flex-col">
           {user.name}
-          <span className="font-medium text-muted-foreground">
-            @{user.user_name}
-          </span>
+          {user.user_name && (
+            <span className="font-medium text-muted-foreground">
+              @{user.user_name}
+            </span>
+          )}
+          {user.email && (
+            <span className="font-medium text-muted-foreground">
+              {user.email}
+            </span>
+          )}
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
