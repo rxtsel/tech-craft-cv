@@ -10,8 +10,8 @@ describe("Sign up page", () => {
   afterEach(cleanup);
 
   it("Should show register buttons", () => {
-    expect(screen.getByText(/register with github/i)).toBeDefined();
-    expect(screen.getByText(/register with google/i)).toBeDefined();
+    expect(screen.getByText(/continue with github/i)).toBeDefined();
+    expect(screen.getByText(/continue with google/i)).toBeDefined();
   });
 
   it("Should show register form", () => {

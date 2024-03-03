@@ -10,8 +10,8 @@ describe("Sign in page", () => {
   afterEach(cleanup);
 
   it("Should show login buttons", () => {
-    expect(screen.getByText("Login with GitHub")).toBeDefined();
-    expect(screen.getByText("Login with Google")).toBeDefined();
+    expect(screen.getByText(/continue with github/i)).toBeDefined();
+    expect(screen.getByText(/continue with google/i)).toBeDefined();
   });
 
   it("Should show login form", () => {
