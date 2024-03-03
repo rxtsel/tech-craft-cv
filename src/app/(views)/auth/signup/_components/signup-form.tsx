@@ -1,7 +1,7 @@
 "use client";
 
-import { signUpWithEmailAndPassword } from "@/actions";
 import { Button, FormField } from "@/components";
+import { signUpWithEmailAndPassword } from "@/repository";
 import { SignUpScheme } from "@/schemes";
 import { SignUp } from "@/types";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -26,8 +26,6 @@ export const SignUpForm = () => {
       const { error } = JSON.parse(result);
 
       if (error) {
-        console.log("ERROR", error);
-
         toast.error(error.message);
         return;
       }
@@ -73,7 +71,7 @@ export const SignUpForm = () => {
         {isPending ? (
           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
         ) : (
-          "Get Started"
+          "Sign Up"
         )}
       </Button>
     </form>
