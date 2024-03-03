@@ -1,4 +1,8 @@
-import { Button, Input, Icons } from "@/components";
+import { Button, Icons } from "@/components";
+import { LoginForm } from "./_components/login-form";
+import { AUTH_ROUTES } from "@/constants";
+import Link from "next/link";
+import { SignInWithGitHubButton } from "./_components/signin-with-github";
 
 const SignIn = () => {
   return (
@@ -8,10 +12,8 @@ const SignIn = () => {
         <p className="text-muted-foreground">Sign in to your account</p>
       </header>
 
-      <form className="space-y-4">
-        <Button className="w-full">
-          <Icons.gh className="mr-2 h-4 w-4 fill-white" /> Login with GitHub
-        </Button>
+      <div className="space-y-4">
+        <SignInWithGitHubButton />
 
         <Button className="w-full" variant="outline">
           <Icons.google className="mr-2 h-4 w-4" /> Login with Google
@@ -27,14 +29,16 @@ const SignIn = () => {
             </span>
           </div>
         </div>
+      </div>
 
-        <div className="space-y-4">
-          <Input placeholder="Email" type="email" />
-          <Button className="w-full" variant="secondary">
-            Continue
-          </Button>
-        </div>
-      </form>
+      <LoginForm />
+
+      <Link
+        href={AUTH_ROUTES.signUp}
+        className="text-sm text-muted-foreground transition-colors hover:text-black hover:underline dark:hover:text-white"
+      >
+        Don&apos;t have an account? Sign up
+      </Link>
     </section>
   );
 };
