@@ -1,24 +1,18 @@
-"use client";
-
-import { Button } from "@/components";
-import { signOut } from "@/repository";
+import { AUTH_ROUTES } from "@/constants";
+import { readUserSession } from "@/lib/application";
+import { redirect } from "next/navigation";
 import React from "react";
 
-const Dashboard = () => {
+const Dashboard = async () => {
+  // redirect to dashboard if user is logged
+  const { data } = await readUserSession();
+
+  if (!data.session) return redirect(AUTH_ROUTES.signIn);
   return (
     <>
       <div>Dashboard</div>
-      <SignOut />
     </>
   );
 };
 
 export default Dashboard;
-
-const SignOut = () => {
-  return (
-    <form action={signOut}>
-      <Button>Sign out</Button>
-    </form>
-  );
-};
