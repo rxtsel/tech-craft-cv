@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: {
     default: "TechCraftCV",
-    template: "%s · TechCraftCV"
+    template: "TechCraftCV · %s"
   },
   description:
     "TechCraftCV is a cutting-edge resume generator tailored for developers, powered by AI and featuring customizable templates, content management, and more.",
