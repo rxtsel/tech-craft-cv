@@ -1,7 +1,10 @@
+"use client";
+
 import { Button, Icons } from "@/components";
-import { SignUpForm } from "./_components/signup-form";
-import Link from "next/link";
 import { AUTH_ROUTES } from "@/constants";
+import Link from "next/link";
+import { SignUpForm } from "./_components/signup-form";
+import { SignUpWithGitHubButton } from "./_components/signup-with-github";
 
 const SignUp = () => {
   return (
@@ -12,9 +15,7 @@ const SignUp = () => {
       </header>
 
       <div className="space-y-4">
-        <Button className="w-full">
-          <Icons.gh className="mr-2 h-4 w-4 fill-white" /> Register with GitHub
-        </Button>
+        <SignUpWithGitHubButton />
 
         <Button className="w-full" variant="outline">
           <Icons.google className="mr-2 h-4 w-4" /> Register with Google

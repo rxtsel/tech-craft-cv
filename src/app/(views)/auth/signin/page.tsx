@@ -2,6 +2,7 @@ import { Button, Icons } from "@/components";
 import { LoginForm } from "./_components/login-form";
 import { AUTH_ROUTES } from "@/constants";
 import Link from "next/link";
+import { SignInWithGitHubButton } from "./_components/signin-with-github";
 
 const SignIn = () => {
   return (
@@ -12,9 +13,7 @@ const SignIn = () => {
       </header>
 
       <div className="space-y-4">
-        <Button className="w-full">
-          <Icons.gh className="mr-2 h-4 w-4 fill-white" /> Login with GitHub
-        </Button>
+        <SignInWithGitHubButton />
 
         <Button className="w-full" variant="outline">
           <Icons.google className="mr-2 h-4 w-4" /> Login with Google
