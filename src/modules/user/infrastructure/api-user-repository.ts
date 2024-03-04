@@ -13,5 +13,7 @@ async function get(): Promise<User | null> {
 
   const { data } = await supabase.from("users").select("*").limit(1);
 
-  return data![0] || null;
+  if (!data) return null;
+
+  return data[0];
 }
