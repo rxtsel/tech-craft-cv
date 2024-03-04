@@ -37,9 +37,9 @@ export const Icons = {
     >
       <path
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
         d="M4 8.5h16M4 15.5h16"
       />
     </svg>
