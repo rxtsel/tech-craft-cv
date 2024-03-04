@@ -21,29 +21,35 @@ export const ProfileMenu = async () => {
 
   if (user === null) return null;
 
-  const initials = generateInitials(
-    user.name! || user.user_name! || user.email!
-  );
+  const initials = user.name! || user.user_name! || user.email!;
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Avatar className="select-none">
-          <AvatarImage src={user.avatar_url!} alt="@shadcn" loading="lazy" />
-          <AvatarFallback>{initials}</AvatarFallback>
+        <Avatar className="cursor-pointer select-none">
+          <AvatarImage
+            src={user.avatar_url!}
+            alt={`profile picture for ${initials}`}
+            loading="lazy"
+          />
+          <AvatarFallback>{generateInitials(initials)}</AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
         <DropdownMenuLabel className="flex flex-col">
-          {user.name}
-          {user.user_name && (
+          {user.name ? user.name : "Anonymous User"}
+
+          {user.user_name ? (
             <span className="font-medium text-muted-foreground">
               @{user.user_name}
             </span>
-          )}
-          {user.email && (
+          ) : user.email ? (
             <span className="font-medium text-muted-foreground">
               {user.email}
+            </span>
+          ) : (
+            <span className="font-medium text-muted-foreground">
+              ID. {user.id.slice(0, 12)}...
             </span>
           )}
         </DropdownMenuLabel>
