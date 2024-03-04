@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <>
       <Topbar />
-      <main className="min-h-[calc(100dvh-36px)] pt-24 md:pl-80">
+      <main className="min-h-[calc(100dvh-36px)] pr-2 pt-24 md:pl-80 md:pr-8">
         <SidebarDesktop className="top-16 w-72" />
         {children}
       </main>
