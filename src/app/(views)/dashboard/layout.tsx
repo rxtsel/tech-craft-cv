@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Topbar } from "./_components";
+import { SidebarDesktop, Topbar } from "./_components";
 
 export const metadata: Metadata = {
   title: "Dashboard"
@@ -10,11 +10,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const HEADER_HEIGHT = 64;
   return (
     <>
       <Topbar />
-      <main className={`min-h-[calc(100dvh-${HEADER_HEIGHT}px)] pt-16`}>
+      <main className="min-h-dvh pt-16 md:pl-72">
+        <SidebarDesktop className="top-16 w-72" />
         {children}
       </main>
     </>
